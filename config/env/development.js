@@ -1,37 +1,10 @@
 'use strict';
 
 module.exports = {
-  db: 'mongodb://' + process.env.OPENSHIFT_MONGODB_DB_USERNAME + ':' + process.env.OPENSHIFT_MONGODB_DB_PASSWORD + '@' + process.env.OPENSHIFT_MONGODB_DB_HOST + ':' + process.env.OPENSHIFT_MONGODB_DB_PORT + '/' + process.env.OPENSHIFT_APP_NAME,
-  /**
-   * Database options that will be passed directly to mongoose.connect
-   * Below are some examples.
-   * See http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html#mongoclient-connect-options
-   * and http://mongoosejs.com/docs/connections.html for more information
-   */
-  http: {
-	port: process.env.OPENSHIFT_NODEJS_PORT,
-  },
-  hostname: process.env.OPENSHIFT_NODEJS_IP,
-  dbOptions: {
-    /*
-    server: {
-        socketOptions: {
-            keepAlive: 1
-        },
-        poolSize: 5
-    },
-    replset: {
-      rs_name: 'myReplicaSet',
-      poolSize: 5
-    },
-    db: {
-      w: 1,
-      numberOfRetries: 2
-    }
-    */
-  },
+  db: 'mongodb://localhost/mean-test',
+  port: 3001,
   app: {
-    name: 'MEAN - A Modern Stack - OpenShift'
+    name: 'MEAN - A Modern Stack - Test'
   },
   facebook: {
     clientID: 'APP_ID',
